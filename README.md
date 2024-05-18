@@ -13,7 +13,7 @@
 
 6. ./redis-server
 
-7.(建新終端機)celery -A myproject worker --loglevel=info
+7.(建新終端機)celery -A mylinebot worker --loglevel=info
 
 8.(建新終端機)celery -A myproject beat --loglevel=info
 
