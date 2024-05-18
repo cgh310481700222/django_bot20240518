@@ -13,9 +13,9 @@
 
 6. ./redis-server
 
-7.(建新終端機先執行2.)celery -A myproject worker --loglevel=info
+7.(建新終端機)celery -A myproject worker --loglevel=info
 
-8.(建新終端機先執行2.)celery -A myproject beat --loglevel=info
+8.(建新終端機)celery -A myproject beat --loglevel=info
 
 ngrok http 8000
 ```
