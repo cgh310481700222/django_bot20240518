@@ -24,3 +24,4 @@ TTPS URL", "property": "messages[0].originalContentUrl"}, {"message": "Must be a
 4ccb-9a78-13e49d9168cb', 'x-xss-protection': '1; mode=block', 'Content-Length': '222', 'Expires': 'Sat, 18 May 2024 14:25:32 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sat, 18 May 2024 14:25:32 GMT', 'Connection': 'close'}
 [18/May/2024 22:25:32] "POST /foodbot/callback HTTP/1.1" 500 108090
 
+C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\static\U239861dd3697f3d1e6f9dfe5f729371c(1).png
