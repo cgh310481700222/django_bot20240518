@@ -9,7 +9,7 @@
 
 4.python manage.py runserver
 
-5.cd "C:\Redis-7.2.4-Windows-x64-msys2"
+5.(建新終端機)cd "C:\Redis-7.2.4-Windows-x64-msys2"
 
 6. ./redis-server
 
