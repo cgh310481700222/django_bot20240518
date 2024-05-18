@@ -17,7 +17,7 @@
 
 8.(建新終端機)celery -A mylinebot beat --loglevel=info
 
-./ngrok http 8000
+9.(建新終端機)./ngrok http 8000
 
-python excel.py
+10.(建立excel)python excel.py
 ```
