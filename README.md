@@ -15,7 +15,7 @@
 
 7.(建新終端機)celery -A mylinebot worker --loglevel=info
 
-8.(建新終端機)celery -A myproject beat --loglevel=info
+8.(建新終端機)celery -A mylinebot beat --loglevel=info
 
 ngrok http 8000
 ```
