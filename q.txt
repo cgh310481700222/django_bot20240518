@@ -1,3 +1,4 @@
+Quit the server with CTRL-BREAK.
 
 Saved 1 image to runs\detect\exp
 Internal Server Error: /foodbot/callback
@@ -8,7 +9,7 @@ Traceback (most recent call last):
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
     return view_func(*args, **kwargs)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 253, in callback
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 255, in callback
     line_bot_api.reply_message(event.reply_token, messages)
   File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\deprecated\classic.py", line 285, in wrapper_function
     return wrapped_(*args_, **kwargs_)
@@ -18,10 +19,8 @@ Traceback (most recent call last):
     self.__check_error(response)
   File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\linebot\api.py", line 2152, in __check_error
     raise LineBotApiError(
-linebot.exceptions.LineBotApiError: LineBotApiError: status_code=400, request_id=ac02bfdb-0acf-4ccb-9a78-13e49d9168cb, error_response={"details": [{"message": "Must be a valid H
+linebot.exceptions.LineBotApiError: LineBotApiError: status_code=400, request_id=a532457b-45bf-4652-8e0c-b14abade4882, error_response={"details": [{"message": "Must be a valid H
 TTPS URL", "property": "messages[0].originalContentUrl"}, {"message": "Must be a valid HTTPS URL", "property": "messages[0].previewImageUrl"}], "message": "The request body has 
-2 error(s)"}, headers={'Server': 'legy', 'Content-Type': 'application/json', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-line-request-id': 'ac02bfdb-0acf-
-4ccb-9a78-13e49d9168cb', 'x-xss-protection': '1; mode=block', 'Content-Length': '222', 'Expires': 'Sat, 18 May 2024 14:25:32 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sat, 18 May 2024 14:25:32 GMT', 'Connection': 'close'}
-[18/May/2024 22:25:32] "POST /foodbot/callback HTTP/1.1" 500 108090
-
-C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\static\U239861dd3697f3d1e6f9dfe5f729371c(1).png
+2 error(s)"}, headers={'Server': 'legy', 'Content-Type': 'application/json', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-line-request-id': 'a532457b-45bf-
+4652-8e0c-b14abade4882', 'x-xss-protection': '1; mode=block', 'Content-Length': '222', 'Expires': 'Sat, 18 May 2024 14:31:03 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sat, 18 May 2024 14:31:03 GMT', 'Connection': 'close'}
+[18/May/2024 22:31:03] "POST /foodbot/callback HTTP/1.1" 500 110446
