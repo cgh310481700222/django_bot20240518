@@ -1,11 +1,11 @@
 # django Line Bot
 
 ```python
-1.python -m venv venv
+1.python -m venv venv(finish)
 
 2.venv\Script\activate
 
-3.pip install -r requirements.txt
+3.pip install -r requirements.txt(finish)
 
 4.python manage.py runserver
 
