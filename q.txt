@@ -1,3 +1,4 @@
+
 Saved 1 image to runs\detect\exp
 Internal Server Error: /foodbot/callback
 Traceback (most recent call last):
@@ -17,8 +18,9 @@ Traceback (most recent call last):
     self.__check_error(response)
   File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\linebot\api.py", line 2152, in __check_error
     raise LineBotApiError(
-linebot.exceptions.LineBotApiError: LineBotApiError: status_code=400, request_id=2e950892-7336-4130-a562-3216127325ee, error_response={"details": [{"message": "Must be a valid H
+linebot.exceptions.LineBotApiError: LineBotApiError: status_code=400, request_id=ac02bfdb-0acf-4ccb-9a78-13e49d9168cb, error_response={"details": [{"message": "Must be a valid H
 TTPS URL", "property": "messages[0].originalContentUrl"}, {"message": "Must be a valid HTTPS URL", "property": "messages[0].previewImageUrl"}], "message": "The request body has 
-2 error(s)"}, headers={'Server': 'legy', 'Content-Type': 'application/json', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-line-request-id': '2e950892-7336-
-4130-a562-3216127325ee', 'x-xss-protection': '1; mode=block', 'Content-Length': '222', 'Expires': 'Sat, 18 May 2024 14:21:28 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sat, 18 May 2024 14:21:28 GMT', 'Connection': 'close'}
-[18/May/2024 22:21:28] "POST /foodbot/callback HTTP/1.1" 500 109195
+2 error(s)"}, headers={'Server': 'legy', 'Content-Type': 'application/json', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-line-request-id': 'ac02bfdb-0acf-
+4ccb-9a78-13e49d9168cb', 'x-xss-protection': '1; mode=block', 'Content-Length': '222', 'Expires': 'Sat, 18 May 2024 14:25:32 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sat, 18 May 2024 14:25:32 GMT', 'Connection': 'close'}
+[18/May/2024 22:25:32] "POST /foodbot/callback HTTP/1.1" 500 108090
+
