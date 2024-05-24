@@ -1,1 +1,6 @@
-C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\static
+                messages = [
+                    ImageSendMessage(
+                        original_content_url=result_image_url,
+                        preview_image_url=result_image_url,
+                    )
+                ]
