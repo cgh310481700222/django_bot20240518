@@ -1,0 +1,23 @@
+[24/May/2024 22:30:13] "GET /static/U239861dd3697f3d1e6f9dfe5f729371c(245).png HTTP/1.1" 200 2840608
+Saved 1 image to runs\detect\exp
+[24/May/2024 22:30:18,922] - Broken pipe from ('127.0.0.1', 57401)
+[ WARN:10@592.345] global loadsave.cpp:248 cv::findDecoder imread_('static\U239861dd3697f3d1e6f9dfe5f729371c(423).png'): can't open/read file: check file path/integrity
+Internal Server Error: /foodbot/callback
+Traceback (most recent call last):
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 86, in callback
+    handle_message_event(event)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 98, in handle_message_event
+    handle_text_message(event)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 105, in handle_text_message
+    handle_feedback(event)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 182, in handle_feedback
+    cv2.imwrite(f"./datasets/images/{T}.png", image)
+cv2.error: OpenCV(4.9.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:786: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'  
+
+[24/May/2024 22:30:25] "POST /foodbot/callback HTTP/1.1" 500 86688
