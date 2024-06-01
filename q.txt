@@ -1,45 +1,4 @@
-Saved 1 image to runs\detect\exp
-C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\mylinebot\celery.py changed, reloading.
-Watching for file changes with StatReloader
-Performing system checks...
-
-Using cache found in C:\Users\murra/.cache\torch\hub\ultralytics_yolov5_master
-requirements: C:\Users\murra\.cache\torch\hub\requirements.txt not found, check failed.
-YOLOv5  2023-4-18 Python-3.8.8 torch-2.2.2+cpu CPU
-
-Fusing layers... 
-Model summary: 276 layers, 35595240 parameters, 0 gradients, 49.7 GFLOPs
-Adding AutoShape...
-System check identified no issues (0 silenced).
-
-You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): foodbot.
-Run 'python manage.py migrate' to apply them.
-June 01, 2024 - 22:16:11
-Django version 4.2.13, using settings 'mylinebot.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.
-
-[ WARN:0@21.840] global loadsave.cpp:248 cv::findDecoder imread_('static\U239861dd3697f3d1e6f9dfe5f729371c(658).png'): can't open/read file: check file path/integrity
-Internal Server Error: /foodbot/callback
-Traceback (most recent call last):
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
-    return view_func(*args, **kwargs)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 86, in callback
-    handle_message_event(event)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 98, in handle_message_event
-    handle_text_message(event)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 105, in handle_text_message
-    handle_feedback(event)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 182, in handle_feedback
-    cv2.imwrite(f"./datasets/images/{T}.png", image)
-cv2.error: OpenCV(4.9.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:786: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'  
-
-[01/Jun/2024 22:16:26] "POST /foodbot/callback HTTP/1.1" 500 86925
-[01/Jun/2024 22:16:43] "GET /static/U239861dd3697f3d1e6f9dfe5f729371c(649).png HTTP/1.1" 200 2675062
+[01/Jun/2024 22:26:31] "POST /foodbot/callback HTTP/1.1" 500 86925
 Saved 1 image to runs\detect\exp
 Internal Server Error: /foodbot/callback
 Traceback (most recent call last):
@@ -63,11 +22,11 @@ Traceback (most recent call last):
     self.__check_error(response)
   File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\linebot\api.py", line 2152, in __check_error
     raise LineBotApiError(
-linebot.exceptions.LineBotApiError: LineBotApiError: status_code=400, request_id=b8afe382-574f-406f-afb3-b01730896626, error_response={"details": [], "message": "Invalid reply t
-oken"}, headers={'Server': 'legy', 'Content-Type': 'application/json', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-line-request-id': 'b8afe382-574f-406f-a
-fb3-b01730896626', 'x-xss-protection': '1; mode=block', 'Content-Length': '33', 'Expires': 'Sat, 01 Jun 2024 14:17:02 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sat, 01 Jun 2024 14:17:02 GMT', 'Connection': 'close'}
-[01/Jun/2024 22:17:03,315] - Broken pipe from ('127.0.0.1', 54507)
-[ WARN:1@82.442] global loadsave.cpp:248 cv::findDecoder imread_('static\U239861dd3697f3d1e6f9dfe5f729371c(660).png'): can't open/read file: check file path/integrity
+linebot.exceptions.LineBotApiError: LineBotApiError: status_code=400, request_id=c079b358-acd8-41fa-88cb-70025d2e8b67, error_response={"details": [], "message": "Invalid reply t
+oken"}, headers={'Server': 'legy', 'Content-Type': 'application/json', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-line-request-id': 'c079b358-acd8-41fa-8
+8cb-70025d2e8b67', 'x-xss-protection': '1; mode=block', 'Content-Length': '33', 'Expires': 'Sat, 01 Jun 2024 14:27:20 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sat, 01 Jun 2024 14:27:20 GMT', 'Connection': 'close'}
+[01/Jun/2024 22:27:20,577] - Broken pipe from ('127.0.0.1', 54652)
+[ WARN:1@72.104] global loadsave.cpp:248 cv::findDecoder imread_('static\U239861dd3697f3d1e6f9dfe5f729371c(678).png'): can't open/read file: check file path/integrity
 Internal Server Error: /foodbot/callback
 Traceback (most recent call last):
   File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
@@ -82,24 +41,350 @@ Traceback (most recent call last):
     handle_text_message(event)
   File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 105, in handle_text_message
     handle_feedback(event)
-  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 182, in handle_feedback
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\foodbot\views.py", line 187, in handle_feedback
     cv2.imwrite(f"./datasets/images/{T}.png", image)
 cv2.error: OpenCV(4.9.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:786: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'  
 
-[01/Jun/2024 22:17:27] "POST /foodbot/callback HTTP/1.1" 500 86925
-(venv) PS C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518> python manage.py runserver
-Watching for file changes with StatReloader
-Performing system checks...
+[01/Jun/2024 22:27:31] "POST /foodbot/callback HTTP/1.1" 500 86925
 
-Using cache found in C:\Users\murra/.cache\torch\hub\ultralytics_yolov5_master
-requirements: C:\Users\murra\.cache\torch\hub\requirements.txt not found, check failed.
-YOLOv5  2023-4-18 Python-3.8.8 torch-2.2.2+cpu CPU
 
-Fusing layers... 
-Model summary: 276 layers, 35595240 parameters, 0 gradients, 49.7 GFLOPs
-Adding AutoShape...
-System check identified no issues (0 silenced).
 
-You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): foodbot.
-Run 'python manage.py migrate' to apply them.
-June 01, 2024 - 22:17:41
+from __future__ import absolute_import, unicode_literals
+from datetime import datetime
+import os
+from celery import Celery
+from celery.schedules import crontab
+import requests
+from django.conf import settings
+from linebot import LineBotApi
+from linebot.models import ImageSendMessage
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mylinebot.settings')
+
+app = Celery('mylinebot')
+
+app.config_from_object('django.conf:settings', namespace='CELERY')
+app.autodiscover_tasks()
+
+line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
+
+IMAGE_URL_TEMPLATE = "https://hank0729.github.io/sentimg/img/{num}.png"
+TOTAL_IMAGES = 119
+
+@app.task
+def send_daily_image():
+    users = Main.objects.all()  
+    
+    day_of_year = datetime.now().timetuple().tm_yday
+    image_num = (day_of_year % TOTAL_IMAGES) + 1
+    image_url = IMAGE_URL_TEMPLATE.format(num=image_num)
+    
+    for user in users:
+        try:
+            line_bot_api.push_message(
+                user.lineid,
+                ImageSendMessage(
+                    original_content_url=image_url,
+                    preview_image_url=image_url
+                )
+            )
+        except Exception as e:
+            print(f"Error sending image to user {user.lineid}: {e}")
+
+app.conf.beat_schedule = {
+    'increment-days-every-morning': {
+        'task': 'foodbot.tasks.increment_days',
+        'schedule': crontab(hour=7, minute=30),
+    },
+    'send-daily-image-every-morning': {
+        'task': 'mylinebot.celery.send_daily_image',
+        'schedule': crontab(hour=22, minute=28),
+    },
+}
+
+
+from django.shortcuts import render, get_object_or_404
+from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+from django.conf import settings
+from linebot import LineBotApi, WebhookHandler, WebhookParser
+from linebot.exceptions import InvalidSignatureError, LineBotApiError
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, FollowEvent, ImageSendMessage, TemplateSendMessage, ButtonsTemplate, MessageTemplateAction
+import logging
+import time
+import torch
+import cv2
+import shutil
+import pandas as pd
+import os
+from datetime import datetime
+from random import choices
+import string
+from openai import OpenAI
+from .models import UserMessage, Main, First, Seven, Month, TwoMonth, ThreeMonth
+
+
+domain = "https://f459-150-129-74-189.ngrok-free.app/"
+
+max_tokens = 500
+temperature = 0
+
+line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
+handler = WebhookHandler(settings.LINE_CHANNEL_SECRET)
+parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
+
+logger = logging.getLogger(__name__)
+chat_language = os.getenv("INIT_LANGUAGE", default="zh")
+
+conversation = []
+
+class ChatGPT:
+    def __init__(self, max_tokens, temperature):
+        self.messages = conversation
+        self.model = os.getenv("OPENAI_MODEL", default="gpt-3.5-turbo")
+        self.max_tokens = max_tokens
+        self.temperature = temperature
+
+    def get_response(self, user_input):
+        client = OpenAI(api_key=OPENAI_API_KEY)
+
+        conversation = [{"role": "system", "content": '你是一個專業的醫療人員，請用已知的知識回答以下問題，若遇到不會的問題，請回答不清楚，請用繁體中文回答。'}, {"role": "user", "content": user_input}]
+
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=conversation,
+            temperature=self.temperature,
+            max_tokens=self.max_tokens,
+        )
+
+        print("AI回答內容：")
+        print(response.choices[0].message.content)
+
+        return response.choices[0].message.content
+
+
+chatgpt = ChatGPT(max_tokens, temperature)
+
+# 設定模型與資料導入
+model_path = "./best.pt"
+food_data = pd.read_excel("./food_data.xlsx")
+food_dict = dict(food_data[["name", "fat"]].values)
+food_name = dict(food_data[["name", "chinese_name"]].values)
+model = torch.hub.load("ultralytics/yolov5", "custom", path=model_path)
+
+@csrf_exempt
+def callback(request):
+    if request.method == "POST":
+        signature = request.META["HTTP_X_LINE_SIGNATURE"]
+        body = request.body.decode("utf-8")
+
+        try:
+            events = parser.parse(body, signature)  
+        except InvalidSignatureError:
+            return HttpResponseForbidden()
+        except LineBotApiError:
+            return HttpResponseBadRequest()
+
+        for event in events:
+            if isinstance(event, MessageEvent):
+                handle_message_event(event)
+            elif isinstance(event, FollowEvent):
+                handle_follow_event(event)
+
+        return HttpResponse()
+    else:
+        return HttpResponseBadRequest()
+
+def handle_message_event(event):
+    if event.message.type == "image":
+        handle_image_message(event)
+    elif event.message.type == "text":
+        handle_text_message(event)
+
+def handle_text_message(event):
+    user_message = UserMessage(line_id=event.source.user_id, message_text=event.message.text)
+    user_message.save()
+
+    if event.message.text in ["正確", "錯誤"]:
+        handle_feedback(event)
+    else:
+        user_message = event.message.text
+        reply_msg = chatgpt.get_response(user_message)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
+
+def handle_image_message(event):
+    line_id = event.source.user_id
+    image_content = line_bot_api.get_message_content(event.message.id)
+    image_name = f"{line_id}.png"
+    unique_path = get_unique_file_path("static", image_name)
+
+    with open(unique_path, "wb") as fd:
+        for chunk in image_content.iter_content():
+            fd.write(chunk)
+
+    img = cv2.imread(unique_path)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    results = model(img)
+    result_df = results.pandas().xyxy[0]
+    results.save()
+
+    detect_image_path = get_unique_file_path("static", image_name)
+    detect_image_name = os.path.basename(detect_image_path)
+    image = cv2.imread("./runs/detect/exp/image0.jpg")
+    cv2.imwrite(detect_image_path, image)
+
+    result_image_url = f"{domain}static/{detect_image_name}"
+
+    messages = [
+        ImageSendMessage(
+            original_content_url=result_image_url,
+            preview_image_url=result_image_url,
+        )
+    ]
+
+    result_df["fat"] = result_df["name"].map(food_dict)
+    result_df["chinese_name"] = result_df["name"].map(food_name)
+    content = ""
+
+    for i in range(len(result_df)):
+        name = result_df["chinese_name"][i]
+        fat = result_df["fat"][i]
+        food_content = f"{name} 熱量為 {fat} 大卡(kcals)"
+        content = content + food_content + "\n"
+
+    total_fat = result_df["fat"].sum()
+    total_content = f"總共: {total_fat} 大卡(kcals)"
+    content = content + total_content
+
+    messages.append(TextSendMessage(f"{content}"))
+    messages.append(
+        TemplateSendMessage(
+            alt_text="Buttons template",
+            template=ButtonsTemplate(
+                title="請問是否正確?",
+                text="請問是否正確?",
+                actions=[
+                    MessageTemplateAction(label="正確", text="正確"),
+                    MessageTemplateAction(label="錯誤", text="錯誤"),
+                ],
+            ),
+        )
+    )
+
+    shutil.rmtree("./runs")
+    line_bot_api.reply_message(event.reply_token, messages)
+
+    try:
+        line_bot_api.push_message(event.reply_token, messages)
+    except LineBotApiError as e:
+        print(f"LineBotApiError : {e.message}")
+
+def handle_feedback(event):
+    line_id = event.source.user_id
+    df = pd.read_excel("./datasets/label.xlsx")
+    T = time.ctime(time.time()).replace(" ", "-").replace(":", "-")
+    new_line = pd.DataFrame({"Column1": [T], "Column2": [event.message.text]})
+    df = pd.concat([df, new_line], ignore_index=True)
+    df.to_excel("./datasets/label.xlsx", index=False)
+    image_path = get_unique_file_path("static", f"{line_id}.png")
+    image = cv2.imread(image_path)
+    cv2.imwrite(f"./datasets/images/{T}.png", image)
+
+def handle_follow_event(event):
+    line_id = event.source.user_id
+
+    days = 1
+    new_first = First.objects.create(lineid=line_id)  
+    new_seven = Seven.objects.create(lineid=line_id)
+    new_month = Month.objects.create(lineid=line_id)
+    new_two_month = TwoMonth.objects.create(lineid=line_id)
+    new_three_month = ThreeMonth.objects.create(lineid=line_id)
+
+    main = Main.objects.create(
+        lineid=line_id,
+        days=days,
+        first=new_first,
+        first_key=new_first.id,  
+        seven=new_seven,
+        seven_key=new_seven.id,
+        month=new_month,
+        month_key=new_month.id,
+        twomonth=new_two_month,
+        twomonth_key=new_two_month.id,
+        threemonth=new_three_month,
+        threemonth_key=new_three_month.id
+    )
+
+    home_url = f"{settings.NGROK_HOST}/{line_id}/home/"
+    line_bot_api.push_message(line_id, TextSendMessage(text=home_url))
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text="Thank you for adding me as a friend!")
+    )
+
+def get_unique_file_path(directory, filename):
+    base, ext = os.path.splitext(filename)
+    unique_path = os.path.join(directory, filename)
+
+    if not os.path.exists(unique_path):
+        return unique_path
+
+    counter = 1
+    unique_path = os.path.join(directory, f"{base}({counter}){ext}")
+
+    while os.path.exists(unique_path):
+        counter += 1
+        unique_path = os.path.join(directory, f"{base}({counter}){ext}")
+
+    return unique_path
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def handle_submission(request, key, view_type):
+    model_classes = {
+        'first': First,
+        'seven': Seven,
+        'month': Month,
+        'twomonth': TwoMonth,
+        'threemonth': ThreeMonth
+    }
+
+    model_class = model_classes.get(view_type)
+    if not model_class:
+        return HttpResponse('Invalid view type', status=400)
+
+    obj = get_object_or_404(model_class, id=key)
+    for field in obj._meta.fields:
+        if field.name in request.POST:
+            setattr(obj, field.name, request.POST[field.name])
+    obj.save()
+
+    return HttpResponse('<center><h1>感謝回覆</h1></center>', status=200)
+
+def home_view(request, name):
+    mains = Main.objects.filter(lineid=name)
+    context = {'first_key': mains.first().first_key if mains.exists() else None}
+    return render(request, 'first.html', context)
+
+def index_view(request, name):
+    mains = Main.objects.filter(lineid=name)
+    context = {'seven_key': mains.first().seven_key if mains.exists() else None}
+    return render(request, 'seven.html', context)
+
+def a3060_view(request, name):
+    mains = Main.objects.filter(lineid=name)
+    context = {
+        'main': mains.first(),
+        'TwoMonth_key': mains.first().twomonth_key if mains.exists() else None
+    }
+    return render(request, '3060.html', context)
+
+def a90_view(request, name):
+    mains = Main.objects.filter(lineid=name)
+    context = {
+        'main': mains.first(),
+        'ThreeMonth_key': mains.first().threemonth_key if mains.exists() else None
+    }
+    return render(request, '90.html', context)
