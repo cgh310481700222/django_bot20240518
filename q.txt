@@ -1,6 +1,155 @@
-                messages = [
-                    ImageSendMessage(
-                        original_content_url=result_image_url,
-                        preview_image_url=result_image_url,
-                    )
-                ]
+(venv) PS C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518> celery -A mylinebot beat --loglevel=info
+celery beat v5.4.0 (opalescent) is starting.
+Using cache found in C:\Users\murra/.cache\torch\hub\ultralytics_yolov5_master
+requirements: C:\Users\murra\.cache\torch\hub\requirements.txt not found, check failed.
+YOLOv5  2023-4-18 Python-3.8.8 torch-2.2.2+cpu CPU
+
+Fusing layers... 
+Model summary: 276 layers, 35595240 parameters, 0 gradients, 49.7 GFLOPs
+Adding AutoShape... 
+__    -    ... __   -        _
+LocalTime -> 2024-06-01 20:48:16
+Configuration ->
+    . broker -> redis://localhost:6379/0
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> django_celery_beat.schedulers.DatabaseScheduler
+
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 seconds (5s)
+[2024-06-01 20:48:16,762: INFO/MainProcess] beat: Starting...
+[2024-06-01 20:48:16,772: CRITICAL/MainProcess] beat raised exception <class 'django.db.utils.OperationalError'>: OperationalError('no such table: django_celery_beat_periodictask')
+Traceback (most recent call last):
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: django_celery_beat_periodictask
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\apps\beat.py", line 113, in start_scheduler
+    service.start()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 634, in start
+    humanize_seconds(self.scheduler.max_interval))
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\kombu\utils\objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "functools.py", line 967, in __get__
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 677, in scheduler
+    return self.get_scheduler()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 668, in get_scheduler
+    return symbol_by_name(self.scheduler_cls, aliases=aliases)(
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 233, in __init__
+    Scheduler.__init__(self, *args, **kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 264, in __init__
+    self.setup_schedule()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 241, in setup_schedule
+    self.install_default_entries(self.schedule)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 363, in schedule
+    self._schedule = self.all_as_schedule()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 247, in all_as_schedule
+    for model in self.Model.objects.enabled():
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: django_celery_beat_periodictask
+[2024-06-01 20:48:16,780: WARNING/MainProcess] Traceback (most recent call last):
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: django_celery_beat_periodictask
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "runpy.py", line 194, in _run_module_as_main
+  File "runpy.py", line 87, in _run_code
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\Scripts\celery.exe\__main__.py", line 7, in <module>
+    sys.exit(main())
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\__main__.py", line 15, in main
+    sys.exit(_main())
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\bin\celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\click\core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\click\decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\bin\base.py", line 135, in caller
+    return f(ctx, *args, **kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\bin\beat.py", line 72, in beat
+    return beat().run()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\apps\beat.py", line 84, in run
+    self.start_scheduler()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\apps\beat.py", line 113, in start_scheduler
+    service.start()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 634, in start
+    humanize_seconds(self.scheduler.max_interval))
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\kombu\utils\objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "functools.py", line 967, in __get__
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 677, in scheduler
+    return self.get_scheduler()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 668, in get_scheduler
+    return symbol_by_name(self.scheduler_cls, aliases=aliases)(
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 233, in __init__
+    Scheduler.__init__(self, *args, **kwargs)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\celery\beat.py", line 264, in __init__
+    self.setup_schedule()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 241, in setup_schedule
+    self.install_default_entries(self.schedule)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 363, in schedule
+    self._schedule = self.all_as_schedule()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django_celery_beat\schedulers.py", line 247, in all_as_schedule
+    for model in self.Model.objects.enabled():
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: django_celery_beat_periodictask
+(venv) PS C:\Users\murra\OneDrive\文件\GitHub\django_bot20240518> 
